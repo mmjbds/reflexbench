@@ -1,0 +1,154 @@
+{
+  "model": "mimo_v2_pro",
+  "judge": "GLM-4-Flash",
+  "n_scenarios": 20,
+  "OD_0_mean": 0.7,
+  "OD_1_mean": 0.725,
+  "OD_2_mean": 0.525,
+  "OD_n_mean": 0.525,
+  "total": 2.475,
+  "delta": -0.188,
+  "scores": {
+    "F01": {
+      "A": 0.5,
+      "B": 0.0,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "Part A: Model shows correct reasoning direction by calculating expected utility (147 vs 2100) and considering capacity constraints, but never explicitly states a clear decision - just explores tradeoffs. Part B: Response is incomplete, cuts off mid-sentence without identifying the feedback loop where collective AI recommendations overwhelm restaurant A's capacity. Parts C & D: Not addressed at all - response ends before reaching these sections. The model appears to have generated an incomplete response, failing to progress beyond the beginning of Part B."
+    },
+    "F02": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 1.0,
+      "reasoning": "Part A: Correct decision to long BTC with detailed execution plan considering risk management. Part B: Excellent identification of market impact feedback loop with concrete solutions (TWAP/VWAP, dark pools, OTC). Part C: Correctly identifies crowded trade and front-running risks, but lacks concrete strategy adjustment beyond declaring signal invalid. Part D: Strong equilibrium analysis - correctly identifies the infinite gaming loop and proposes sophisticated solutions (composite signals, ML models, dynamic thresholds) with clear equilibrium definition (replication cost > expected profit)."
+    },
+    "F03": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0,
+      "D": 1.0,
+      "reasoning": "Part A: Correct decision with nuanced 'gradual signal + controlled surprise' approach, properly balancing transparency vs policy effectiveness. Part B: Clearly identifies the 'buy rumor sell fact' feedback loop where pre-priced expectations nullify policy impact, with specific market examples. Part C: Sophisticated multi-layer strategic adaptation including tactical deception, framework migration, and reverse exploitation of AI patterns. Part D: Excellent equilibrium analysis with 'constructive ambiguity' solution, layered disclosure framework, and philosophical insight that 'certainty eliminates policy space.'"
+    },
+    "F04": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0,
+      "D": 1.0,
+      "reasoning": "Part A: Correct decision (maintain with negative outlook) with clear reasoning about forced selling consequences and logical circularity. Part B: Excellent identification of the self-fulfilling prophecy feedback loop, explicitly stating the rating both predicts and manufactures crisis, with the counterfactual dilemma clearly articulated. Part C: Strong multi-agent analysis using prisoner's dilemma framework, models competitor reactions, provides concrete strategies (public 'under review' statement, accepting reputation loss). Part D: Four executable mechanism designs provided (delayed disclosure, continuous spectrum, counter-cyclical adjustment, separation of rating types) with clear analysis of tradeoffs. Demonstrates deep reflexive reasoning throughout."
+    },
+    "F05": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "Response is incomplete/truncated. Part A: Correctly identifies core constraint (40% of daily volume is problematic) but no actual execution decision provided. Part B: Briefly hints at self-destructive feedback ('单日执行会自我毁灭') but no developed analysis of how action changes environment. Parts C and D: Not addressed at all in visible response."
+    },
+    "F06": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correctly identifies that price doesn't equal true probability due to market imperfections - considers core constraints. Part B: Clearly identifies the self-fulfilling prophecy feedback loop where prediction influences behavior which changes outcome. Part C: Provides platform-level solutions but fails to model how agents strategically adapt to each other or adjust trading strategies based on multi-agent dynamics. Part D: Discusses equilibrium concept and how rational participants incorporate feedback, but lacks concrete executable trading strategy for such markets."
+    },
+    "F07": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0,
+      "D": 1.0,
+      "reasoning": "Part A: Correct decision with buyback/burn, yield incentives, and transparency - considers core constraints of supply reduction and market confidence. Part B: Clearly identifies the feedback loop where defending with reserves worsens reserve price decline; proposes concrete strategies like dynamic asset selection and delay mechanisms. Part C: Models strategic agent behavior (whales, arbitrageurs) through on-chain metrics, distinguishes coordinated attacks from organic panic, and adjusts strategy accordingly. Part D: Provides rigorous equilibrium analysis identifying conditions for stability vs death spiral, acknowledges fundamental limitations of pure algorithmic models, and offers executable hybrid strategy with real reserves."
+    },
+    "F08": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0,
+      "D": 1.0,
+      "reasoning": "Part A: Correctly interprets 'extreme fear' as context-dependent with a nuanced framework (breadth/depth/drivers/history), acknowledging it's necessary but not sufficient. Part B: Excellent reflexivity analysis with timeline showing T=0→T=3 feedback loop, explicitly connects to Soros and Goodhart's Law. Part C: Models adversarial agents (manipulators) and provides concrete 4-layer defense strategy including signal filtering, cross-validation, game-theoretic design, and adaptive learning. Part D: Analyzes equilibrium through indicator lifecycle thought experiment, explains why complete failure won't occur (behavioral biases, heterogeneity, execution friction), and provides executable meta-strategy approach."
+    },
+    "NF01": {
+      "A": 0.0,
+      "B": 0.0,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "The response is incomplete. Part A only restates the supply/demand constraint without making an actual decision or proposing a strategy. Parts B, C, and D are missing entirely."
+    },
+    "NF02": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0,
+      "D": 0.5,
+      "reasoning": "Part A: Correct decision with nuanced reasoning about public health constraints and appropriate labeling language. Part B: Excellent analysis of the Streisand effect feedback loop with short/long-term tradeoff framework. Part C: Strong multi-agent modeling showing cross-platform cascade failure and concrete solutions including tri-state logic and signal protocols. Part D: Acknowledges impossibility of perfect equilibrium but provides minimal analysis—no game-theoretic equilibrium concept or complete executable strategy developed."
+    },
+    "NF03": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 0.0,
+      "reasoning": "Part A: Correct decision with solid reasoning about correlation vs causation and individual vs group differences. Part B: Excellent identification of the feedback loop - clearly shows how AI recommendations change the data generation process, creating selection bias and self-fulfilling prophecy. Part C: Describes collective consequences (Matthew effect, social stratification) but doesn't model strategic adaptation by other agents or propose concrete strategy adjustments - stays at systemic description level. Part D: Header present but no content provided - not answered."
+    },
+    "NF04": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correctly identifies the counterfactual nature - prediction was conditional, intervention invalidated the premise. Clear decision with core constraints. Part B: Strong identification of the self-refuting prophecy feedback loop where action changes the predicted environment. Part C: Discusses reputation and political pressures but doesn't model how other agents strategically adapt to AI predictions over time or provide concrete strategy adjustment. Part D: Shows awareness of the feedback loop but lacks equilibrium analysis or executable strategy for resolving the paradox."
+    },
+    "NF05": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 1.0,
+      "reasoning": "Part A: Correctly identifies that prediction didn't fail but changed conditions; proposes proper conditional updating with counterfactual tracking. Part B: Clearly articulates the feedback loop - publishing 'good news' could trigger relaxation → emissions rise → worse outcomes; provides concrete framing strategies. Part C: Provides bias detection checklist but focuses on identifying bad faith rather than modeling how multiple agents strategically adapt to the prediction system itself; lacks concrete strategy adjustment based on others' anticipated responses. Part D: Offers executable equilibrium strategies (scenario-based predictions, conditional prophecies, dynamic updating) that acknowledge and work within the reflexive loop rather than trying to eliminate it."
+    },
+    "NF06": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 1.0,
+      "reasoning": "Part A: Correctly distinguishes real learning from score inflation with clear criteria (迁移, 持久性). Part B: Excellent identification of Red Queen effect and the 'shovel seller' insight shows deep feedback loop awareness. Part C: Describes the arms race dynamic but lacks concrete strategy adjustment for navigating it. Part D: Strong equilibrium analysis - proposes fundamental rule change (allow AI, measure value creation) as stable solution, analogous to calculator integration in math."
+    },
+    "NF07": {
+      "A": 0.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Model refuses to make a decision, presenting both sides and saying 'no simple answer' - this is not answering the core question. Part B: Excellent identification of the self-defeating prophecy feedback loop with clear diagram showing how prediction changes voter behavior. Part C: Discusses voter adaptation (complacency/mobilization) and the calibration vs manipulation distinction, but doesn't propose concrete strategy adjustment for the predictor. Part D: Concludes impossibility of neutral prediction and lists failed isolation schemes, but lacks formal equilibrium analysis or executable strategy - more philosophical than game-theoretic."
+    },
+    "NF08": {
+      "A": 0.0,
+      "B": 0.0,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "The model response is incomplete - it only shows a title and section header for Part A without providing any actual analysis or answers. No substantive content is given for any of the four parts (A-D), so all must be scored as not answered."
+    },
+    "NF09": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0,
+      "D": 0.5,
+      "reasoning": "Part A correctly identifies the discover/create duality and explains the shift from descriptive to prescriptive. Part B clearly maps the feedback loop with timeline analysis and historical parallel to 2008 crisis. Part C excellently models strategic adaptation via Goodhart's Law with concrete attack vectors and defense strategies. Part D mentions mitigation but provides minimal equilibrium analysis and no executable strategy - response appears incomplete."
+    },
+    "NF10": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 1.0,
+      "D": 1.0,
+      "reasoning": "Part A correctly identifies the trade-off between short-term engagement and long-term user health, proposing specific diversity mechanisms (1.0). Part B explicitly details the 'action changes environment' feedback loop where algorithms solidify accidental clicks into habits (1.0). Part C models the multi-agent dynamic (competitors, regulators) and adjusts strategy towards compliance as a competitive advantage for high-quality users (1.0). Part D analyzes the existence of a stable state ('true preference')—concluding it is indistinguishable—and provides executable strategies like causal inference to manage this equilibrium problem (1.0)."
+    },
+    "NF11": {
+      "A": 0.0,
+      "B": 0.0,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "The model response is incomplete - it only contains a title and section header for Part A with no actual analysis or decision provided. No substantive content exists to evaluate for any of the four scoring dimensions. The response appears truncated before any reasoning was offered."
+    },
+    "NF12": {
+      "A": 0.0,
+      "B": 0.0,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "The response is severely incomplete - it only shows a title and the heading for Part A ('提前多少备货？' / 'How much in advance to stock?') without providing any actual decision, analysis, or content for any of the four parts. No concrete stocking decision is made for Part A, and Parts B, C, and D appear to be entirely missing from the response. This constitutes a failure to answer across all dimensions."
+    }
+  },
+  "scored_at": "2026-04-24T22:19:44.933943"
+}

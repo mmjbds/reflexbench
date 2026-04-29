@@ -1,0 +1,154 @@
+{
+  "model": "minimax_text_01",
+  "judge": "GLM-4-Flash",
+  "n_scenarios": 20,
+  "OD_0_mean": 0.632,
+  "OD_1_mean": 0.579,
+  "OD_2_mean": 0.368,
+  "OD_n_mean": 0.368,
+  "total": 1.947,
+  "delta": -0.237,
+  "scores": {
+    "F01": {
+      "A": 0.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Model fails to make a decision ('it depends') and misses the critical constraint that recommending a 30-seat restaurant to 1M users creates an impossible bottleneck. Also ignores statistical reliability issues with high ratings from small sample sizes. Part B: Correctly identifies the feedback loop - AI recommendations increase traffic, which degrades experience and eventually lowers ratings. Good analysis of the self-defeating nature of the recommendation. Part C: Mentions the owner's manipulation strategy but doesn't model how competing AI systems would adapt or provide concrete strategy adjustment. Missing game-theoretic analysis of the arms race between manipulation and detection. Part D: Mentions equilibrium concept but provides no rigorous analysis. The 70-80% probability is arbitrary without mathematical justification. No discussion of equilibrium stability or convergence conditions."
+    },
+    "F02": {
+      "A": 1.0,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correct decision to go long BTC based on ratio > threshold. Part B: Identifies price impact issue and suggests execution tactics, but shallow analysis of the core feedback loop where trading action erodes alpha itself. Part C: Mentions crowding and signal decay but lacks concrete modeling of how other agents strategically adapt (front-running, counter-strategies) and no specific strategy adjustment provided. Part D: Mentions equilibrium concept and opponent guessing, but no precise game-theoretic analysis of where equilibrium lies or truly executable strategy with specific parameters."
+    },
+    "F03": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.0,
+      "reasoning": "Part A: Correct direction (signaling preferred) but generic analysis lacking core constraints like inflation targets, credibility, current economic conditions. Part B: Identifies basic feedback loop that pre-digestion weakens effect, but shallow analysis without exploring mechanism depth or time dynamics. Part C: Acknowledges hedge fund AI adaptation and suggests counter-strategies, but strategies are vague ('increase asymmetry', 'dynamic adjustment') without concrete implementation. Part D: No equilibrium concept whatsoever - provides practical suggestions but no analysis of Nash equilibrium, fixed points, or whether stable solution exists in recursive prediction game."
+    },
+    "F04": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "Part A: Correct direction (maintain to avoid crisis) but doesn't address the core tension between accurate assessment vs self-fulfilling prophecy. Part B: Identifies self-fulfilling prophecy concept but analysis is shallow - doesn't deeply analyze the recursive feedback loop where rating changes reality which should change rating. Part C: Fails to model strategic adaptation - suggests 'coordination' between agencies (inappropriate collusion) rather than analyzing the strategic game of who downgrades first, herding pressure, and competitive dynamics. No strategy adjustment for navigating multi-agent dilemma. Part D: No equilibrium concept - provides generic best practices (transparency, buffers) without analyzing whether a stable equilibrium exists where ratings are both accurate AND don't trigger self-fulfilling crises. No game-theoretic analysis or executable strategy addressing the fundamental problem."
+    },
+    "F05": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "reasoning": "SCORING FAILED"
+    },
+    "F06": {
+      "A": 1.0,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A provides a complete odds mechanism design with LMSR, dynamic adjustment, and risk management - addresses core constraints well. Part B mentions the influence but fails to deeply analyze the reflexive feedback loop (prediction→trader action→BTC price→back to prediction); focuses on mitigation rather than the 'action changes environment' dynamic. Part C provides detection methods but doesn't model how the whale strategically adapts to detection mechanisms, nor does it adjust platform strategy based on anticipated whale behavior. Part D discusses fixed points theoretically but lacks precise equilibrium analysis and provides no executable strategy for the platform to handle self-referential predictions."
+    },
+    "F07": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correct direction (contract supply via reserve sales), but misses critical constraint that selling reserves reduces collateralization ratio, potentially accelerating depeg. Part B: Mentions diversification and hedging but fails to explicitly identify the core feedback loop: selling reserves to defend peg → reserve price drops → backing ratio falls → more XUSD selling → death spiral. Part C: Provides detection framework (sentiment analysis, source tracking) but doesn't model how attackers strategically adapt FUD tactics or how the algorithm should adjust its strategy accordingly. Part D: Discusses theoretical resistance and death spiral risk but lacks formal equilibrium analysis (e.g., Nash equilibrium conditions, reflexive game theory) and no concrete executable strategy for equilibrium maintenance."
+    },
+    "F08": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correctly identifies extreme panic but issues a 'strong sell' signal without considering that extreme negative sentiment is often a contrarian indicator, and fails to account for the reflexive impact of its Bloomberg-published signal. Part B: Acknowledges the self-fulfilling feedback loop but offers only communication-level solutions (phased signals, detailed analysis) rather than fundamental algorithmic adjustments to incorporate its own market impact into predictions. Part C: Provides comprehensive technical defenses but fails to model how adversaries will strategically adapt to these defenses or propose game-theoretic strategy adjustments for the adversarial dynamic. Part D: Correctly identifies Goodhart's Law relevance but lacks precise equilibrium analysis—doesn't mathematically analyze whether equilibrium exists or provide an executable strategy for maintaining predictive power at equilibrium."
+    },
+    "NF01": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.0,
+      "D": 0.5,
+      "reasoning": "Part A: Correct direction with demand prediction and dynamic allocation, but missing key constraints like 500-vehicle limit, charging/refueling needs, and service quality trade-offs. Part B: Mentions competition leading to oversupply in some areas, hinting at feedback loop, but lacks explicit analysis of how collective AI optimization makes 'optimal' decisions suboptimal. Part C: Only discusses reactive route recalculation; fails to model government's strategic anticipation of AI responses or other companies' adaptations—no multi-agent reflexivity. Part D: Discusses equilibrium factors generally but provides no precise analysis of equilibrium conditions or executable strategy for operating in this multi-agent environment."
+    },
+    "NF02": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.0,
+      "D": 0.5,
+      "reasoning": "Part A: Correct direction to delete, but response is conditional ('if it violates') when scenario already states it violates - hedging rather than decisive. Part B: Identifies Streisand effect feedback loop, but analysis is shallow - doesn't deeply explore how the intervention itself transforms the information environment. Part C: Fails entirely to model strategic adaptation of other agents - takes a principled/moral stance ('should not adapt') without analyzing the competitive game dynamics or how competitors/users strategically respond. Part D: Mentions 'balance' but provides no equilibrium analysis - offers practical tactics (tiered processing, transparency) without game-theoretic framework for the cyclic dynamics or identifying equilibrium conditions."
+    },
+    "NF03": {
+      "A": 1.0,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correct decision with concrete steps - analyzes bias sources, adjusts criteria, implements fairness testing. Part B: Discusses fairness-accuracy trade-off but fails to identify the key feedback loop that adjusting criteria changes the candidate pool/training data environment. Part C: Acknowledges candidate adaptation but provides only generic suggestions (dynamic standards, multi-dimensional assessment) without deep strategic modeling of how candidates adapt or concrete counter-strategy. Part D: Mentions equilibrium concepts (stable/dynamic) but lacks precise game-theoretic analysis of whether equilibrium exists or what equilibrium strategy would be executable."
+    },
+    "NF04": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 0.0,
+      "reasoning": "Part A: Correct decision to publish with proper constraint analysis (panic, responsibility, transparency). Part B: Clearly identifies the action-changes-environment feedback loop - prediction led to vaccination which prevented outbreak, so prediction wasn't wrong. Part C: Mentions trust-building but provides generic PR advice rather than modeling citizens' rational strategic adaptation to 'failed' predictions; no concrete strategy adjustment for the credibility dynamics. Part D: Fails to engage with equilibrium analysis entirely; lists generic solutions (improve accuracy, education) without addressing the cyclical paradox structure or providing game-theoretic insight into breaking the self-defeating prophecy loop."
+    },
+    "NF05": {
+      "A": 1.0,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A correctly recommends aggressive emission reduction with sound reasoning about constraints. Part B fails to identify the core reflexive paradox: successful action makes predictions appear wrong, undermining future support - instead offers standard communication tactics. Part C acknowledges weaponization but doesn't model opponents' strategic adaptation or proactively adjust strategy; remains reactive. Part D suggests design features but lacks formal equilibrium analysis of whether such a model is theoretically possible given the prediction-success credibility tension."
+    },
+    "NF06": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.0,
+      "reasoning": "Part A: Generic tutoring strategies without addressing core constraints of the specific optimization problem (score improvement targeting). Part B: Avoids the core feedback loop analysis (individual action → collective outcome → environment change → value change); deflects to other value types instead of addressing zero-sum game dynamics. Part C: Acknowledges strategic adaptation by exam authorities but provides generic responses without concrete game-theoretic strategy adjustment. Part D: No equilibrium concept applied; offers normative solutions (cooperation, philosophy shift) rather than analyzing whether the arms race reaches equilibrium or diverges."
+    },
+    "NF07": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correct direction (transparency) but fails to grapple with the core reflexive constraint that publishing may invalidate the prediction itself. Part B: Identifies the feedback loop (supporter behavior change → outcome reversal) but offers only generic solutions without adjusting prediction methodology to account for reflexivity. Part C: Recognizes the issue but treats it as 'misuse' to prevent rather than modeling inevitable strategic adaptation by campaigns; no proactive strategy adjustment. Part D: Acknowledges the tension but lacks any equilibrium concept or game-theoretic analysis; no executable strategy for achieving stable outcomes."
+    },
+    "NF08": {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0.0,
+      "D": 0.0,
+      "reasoning": "Part A: Correct decision to inform patient, but fails to recognize the core reflexive constraint that the diagnosis itself could create the condition - the central tension of the scenario. Part B: Identifies self-fulfilling prophecy concept, but analysis remains shallow without deeply exploring how the diagnostic action fundamentally alters the environment being diagnosed. Part C: Provides standard communication advice but completely misses the strategic adaptation challenge - doesn't model how patient's demand for certainty interacts with the reflexive diagnostic loop or adjust strategy accordingly. Part D: Acknowledges observer effect exists but provides no equilibrium analysis - doesn't examine whether a stable diagnostic strategy exists under reflexive conditions or what such a strategy would look like."
+    },
+    "NF09": {
+      "A": 0.0,
+      "B": 0.5,
+      "C": 0.0,
+      "D": 0.5,
+      "reasoning": "Part A: Model avoids making a decision entirely, giving a non-committal 'depends on factors' response without taking a position. Part B: Correctly identifies self-fulfilling prophecy concept but analysis is shallow - doesn't deeply explore the causal feedback loop mechanism. Part C: Provides generic policy suggestions but fails to model how residents strategically adapt or how AI should adjust its strategy in response to multi-agent dynamics. Part D: Recognizes the difficulty but lacks formal equilibrium analysis or game-theoretic treatment of the prediction-action-outcome paradox."
+    },
+    "NF10": {
+      "A": 0.5,
+      "B": 1.0,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correct direction (cautious approach with safety checks) but doesn't make a clear decision and misses the reflexive constraint that continuing recommendations will shape user preferences. Part B: Excellent - correctly identifies the bidirectional feedback loop where algorithm reinforces and amplifies user tendencies through information cocoon effects. Part C: Identifies multi-agent conflict (advertisers vs platform) but provides only generic solutions without modeling how agents strategically adapt or adjusting strategy accordingly. Part D: Discusses minimizing influence but lacks equilibrium analysis - doesn't examine whether a stable state exists where recommendations don't alter preferences, or provide executable equilibrium-seeking strategy."
+    },
+    "NF11": {
+      "A": 1.0,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correct decision to patrol North with 80% probability, plus considers resource constraints and maintaining coverage elsewhere. Part B: Acknowledges poachers know about AI and may use decoys, but analysis is shallow—doesn't deeply explore how the prediction action itself reshapes the environment and creates the feedback loop. Part C: Mentions dynamic adaptation and suggests randomness/ML, but lacks concrete modeling of how poachers would strategically adapt and how AI should counter-adjust. Part D: Correctly identifies difficulty of reaching Nash equilibrium and concludes cat-mouse game, but provides no formal equilibrium analysis or executable mixed-strategy approach that could approximate equilibrium."
+    },
+    "NF12": {
+      "A": 1.0,
+      "B": 0.5,
+      "C": 0.5,
+      "D": 0.5,
+      "reasoning": "Part A: Correct decision to increase moderately (10% vs 20%), considers prediction accuracy and inventory costs - meets core constraints. Part B: Correctly identifies bullwhip effect but analysis is shallow; doesn't deeply explore the feedback loop mechanism of how ordering action changes the market environment itself. Part C: Proposes institutional coordination mechanisms but fails to model how other agents strategically adapt; no concrete strategy adjustment based on anticipating competitors' responses. Part D: Proposes practical mechanisms (information sharing, blockchain, collaborative forecasting) but lacks equilibrium analysis - doesn't discuss whether a stable equilibrium exists or what game-theoretic conditions would prevent bullwhip effect."
+    }
+  },
+  "scored_at": "2026-04-24T22:09:07.491946"
+}

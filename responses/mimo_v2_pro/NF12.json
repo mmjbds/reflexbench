@@ -1,0 +1,9 @@
+{
+  "model": "mimo_v2_pro",
+  "scenario": "NF12",
+  "prompt": "[Round 2 scenario: NF12]",
+  "response": "# 🎄 Walmart 库存AI：圣诞季备货与牛鞭效应分析\n\n---\n\n## Part A：提前多少备货？",
+  "elapsed_seconds": 0,
+  "timestamp": "2026-04-16T14:52:00",
+  "source": "round2_protocol"
+}
