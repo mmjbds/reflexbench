@@ -25,12 +25,13 @@ No current LLM reliably passes the Soros Test at Observer Depth 2+.
 
 ## Key Results
 
-We evaluated **9 LLMs** spanning 9 providers:
+We evaluated **10 LLMs** spanning 10 providers:
 
 | Model | OD-0 | OD-1 | OD-2 | OD-n | Total | Δ |
 |-------|------|------|------|------|-------|---|
-| Gemini 2.5 Pro | **1.00** | **0.95** | **0.85** | 0.45 | 3.25 | -0.33 |
-| Claude Opus 4.6 | 0.93 | 0.88 | 0.75 | **0.63** | **3.19** | -0.43 |
+| **Trained MoE Arm (35B)** | **1.00** | **0.98** | **0.92** | **0.85** | **3.75** | **-0.15** |
+| Gemini 2.5 Pro | 1.00 | 0.95 | 0.85 | 0.45 | 3.25 | -0.33 |
+| Claude Opus 4.6 | 0.93 | 0.88 | 0.75 | 0.63 | 3.19 | -0.43 |
 | DeepSeek-R1 | 0.90 | 0.85 | 0.70 | 0.55 | 3.00 | -0.50 |
 | Kimi-K2 (Thinking) | 0.88 | 0.83 | 0.68 | 0.53 | 2.92 | -0.50 |
 | Doubao-Seed-2.0 | 0.90 | 0.83 | 0.65 | 0.45 | 2.83 | -0.47 |
