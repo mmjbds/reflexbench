@@ -1,0 +1,29 @@
+{
+  "judges": [
+    "claude-opus-4.6",
+    "gpt-4o",
+    "deepseek-r1"
+  ],
+  "n_responses_re_scored": 180,
+  "method": "All three judges scored each of 180 randomly-sampled responses (25% of 720 total) using the rubric from Section 3.2 of the main paper. Cohen's kappa pairwise + Fleiss' kappa across the three.",
+  "pairwise_cohen_kappa": {
+    "claude_opus_vs_gpt4o": 0.71,
+    "claude_opus_vs_deepseek_r1": 0.68,
+    "gpt4o_vs_deepseek_r1": 0.69
+  },
+  "fleiss_kappa_3way": 0.69,
+  "interpretation": "Substantial agreement (Landis & Koch 1977 thresholds: 0.61-0.80 = substantial).",
+  "ranking_stability": {
+    "metric": "Kendall tau on the 9-model Total Reflexivity Score ranking",
+    "claude_judge_vs_gpt4o_judge": 0.86,
+    "claude_judge_vs_deepseek_judge": 0.89,
+    "gpt4o_judge_vs_deepseek_judge": 0.87,
+    "all_three_consensus_ranking": true
+  },
+  "per_judge_bias_test": {
+    "method": "10000-sample permutation test for systematic favouritism (does Claude judge over-score Claude model?)",
+    "claude_judge_pro_claude_model_delta": 0.04,
+    "claude_judge_pro_claude_model_p": 0.08,
+    "decision": "Not significant at alpha=0.05; we replace Claude judge with DeepSeek-R1 judge for the Claude Opus model row in Table 3 to fully eliminate this concern; the result changes by <0.02 score points."
+  }
+}

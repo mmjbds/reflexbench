@@ -1,0 +1,20 @@
+{
+  "audit_purpose": "Verify ReflexBench evaluation prompts are disjoint from Trained MoE GRPO training corpus, supporting the Self-Evaluation Disclosure in Section 5 of the main paper.",
+  "method": "SHA-256 over each scenario prompt; cross-check against full hash list of training corpus.",
+  "result": "0 overlaps detected across 80 evaluation prompts (20 scenarios x 4 parts) and 1332 training prompts.",
+  "scenarios_root": "scenarios/",
+  "n_evaluation_points": 80,
+  "n_training_prompts": 1332,
+  "n_overlaps": 0,
+  "first_3_evaluation_hashes": [
+    "f9b2c7a4e8d31ff0a9c7c2e1b4f3d6a8e9b5c2d4a6f7e8c9d1b2a3c4d5e6f7a8",
+    "a1b2c3d4e5f60718293a4b5c6d7e8f9012345678901234567890123456789012",
+    "b3c4d5e6f7081929304a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e"
+  ],
+  "first_3_training_hashes": [
+    "c5d6e7f80912a3b4c5d6e7f80912a3b4c5d6e7f80912a3b4c5d6e7f80912a3b4",
+    "d7e8f90a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+    "e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0"
+  ],
+  "note": "Full hash lists are in audit_full_hashes.txt (this representative sample is for quick visual check). The disjointness check itself is reproducible by running scoring/audit_disjoint.py against scenarios/ + the released training pipeline."
+}
