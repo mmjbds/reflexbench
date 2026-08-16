@@ -1,33 +1,39 @@
-# ReflexBench Supplementary v2 (NeurIPS 2026 Datasets & Benchmarks Track)
+# ReflexBench Supplementary v2
 
-This v2 supplementary supersedes the v1 release of 2026-04-29 by adding two
-new audit appendices that strengthen the self-evaluation disclosure of the
-main paper.
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-## Contents (additions in v2 marked with [NEW])
+ReflexBench evaluates observer-participant reasoning: whether an AI system continues to reason correctly as its own output changes users, evidence, incentives, institutions, and other actors.
+
+This repository is an anonymized supplementary artifact for a double-blind 2026 submission. Do not add author identities, personal homepages, institutional clues, or cross-links that can de-anonymize the submission while review is active.
+
+## Contents
 
 | Path | Description |
 |------|-------------|
-| `reflexbench.jsonl`              | All 80 evaluation prompts (20 scenarios x 4 OD levels) |
-| `scenarios/`                     | Per-scenario JSON descriptions, organised by domain |
-| `responses/`                     | Raw model responses for the 9 evaluated public LLMs |
-| `scoring/`                       | LLM-as-judge scoring scripts and rubric definitions |
-| `ablations/moe_vs_dense/`        | MoE vs Dense ablation scores (App. A of main paper) |
-| `audit/` [NEW]                   | SHA-256 disjointness check between ReflexBench scenarios and Trained MoE training corpus (supports App. C) |
-| `judge_robustness/` [NEW]        | 3-judge Cohen's kappa + Fleiss kappa + per-judge bias permutation test (supports App. B) |
+| `reflexbench.jsonl` | 80 evaluation prompts: 20 scenarios across four observer-depth levels |
+| `scenarios/` | Per-scenario JSON descriptions organized by domain |
+| `responses/` | Raw responses for nine evaluated public LLMs |
+| `scoring/` | Judge scripts and rubric definitions |
+| `ablations/moe_vs_dense/` | MoE-versus-dense comparison scores |
+| `audit/` | Scenario-to-provided-corpus text-disjointness audit |
+| `judge_robustness/` | Multi-judge agreement, rank association, and judge-bias checks |
 
-## Reproduce key claims
+## Recompute Public Checks
 
-| Claim | Path |
-|-------|------|
-| Trained MoE arm did not see ReflexBench at training time | `audit/scenario_corpus_disjoint.json` |
-| LLM judge agreement is substantial (kappa = 0.69 Fleiss) | `judge_robustness/inter_judge_kappa.json` |
-| 9-model ranking is judge-independent (Kendall tau >= 0.86) | `judge_robustness/inter_judge_kappa.json` |
-| MoE provides architectural premium | `ablations/moe_vs_dense/moe_vs_dense_scores.csv` |
+| Check | Public route | Supported interpretation |
+|-------|--------------|--------------------------|
+| Scenario/corpus disjointness | `audit/scenario_corpus_disjoint.json` | No detected scenario overlap against the provided comparison corpus under the documented check; not full training-lineage proof |
+| Inter-judge agreement | `judge_robustness/inter_judge_kappa.json` | Fleiss kappa reported as 0.69 for the included judge panel and sample |
+| Ranking association | `judge_robustness/inter_judge_kappa.json` | Kendall tau values reported at or above 0.86 for the included judges; not universal judge independence |
+| MoE/dense comparison | `ablations/moe_vs_dense/moe_vs_dense_scores.csv` | Architecture comparison under the included conditions; not a general MoE premium |
 
-## Anonymisation
-
-This supplementary contains no author identifiers. All file paths are
-relative; no usernames, machine names, or training cluster identifiers are
-present. The anonymous repository is at:
+The anonymous archive route recorded for the review artifact is:
 https://anonymous.4open.science/r/reflexbench-24E0
+
+## Claim Boundary
+
+The artifact supports recomputation and audit under the released scenarios, responses, judge configurations, and scoring files. It does not establish production trustworthiness, causal deployment effects, complete training-data provenance, universal judge independence, or general architectural superiority. See [CLAIM_BOUNDARY.md](CLAIM_BOUNDARY.md).
+
+## License
+
+Intentionally released repository code and artifact files are under Apache-2.0 unless a file states otherwise. See [LICENSE](LICENSE).
