@@ -4,7 +4,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+from pathlib import Path
 
 models = ['Claude\nOpus 4.6', 'DeepSeek\nR1', 'Kimi-K2\n(Thinking)', 'GLM-5.1', 'Qwen3']
 od0 = [0.93, 0.90, 0.88, 0.88, 0.85]
@@ -31,7 +31,7 @@ for i in range(len(models)):
                 fontsize=8, ha='center', color='#E63946', fontweight='bold')
 
 ax.set_ylabel('Score (0-1)', fontsize=12, fontweight='bold')
-ax.set_title('Observer Depth Profile: Universal Reflexivity Degradation', fontsize=13, fontweight='bold')
+ax.set_title('Observer Depth Profile: Included-Model Degradation', fontsize=13, fontweight='bold')
 ax.set_xticks(x)
 ax.set_xticklabels(models, fontsize=9)
 ax.set_ylim(0, 1.05)
@@ -43,7 +43,7 @@ ax.spines['right'].set_visible(False)
 ax.axhline(y=0.5, color='gray', linewidth=0.5, linestyle=':', alpha=0.5)
 
 plt.tight_layout()
-outpath = '/Users/agent/Desktop/Soul_OS_Workspace/figures/od_profile.png'
+outpath = Path(__file__).resolve().parent / 'od_profile.png'
 plt.savefig(outpath, dpi=300, bbox_inches='tight', facecolor='white')
-plt.savefig(outpath.replace('.png', '.pdf'), bbox_inches='tight', facecolor='white')
+plt.savefig(outpath.with_suffix('.pdf'), bbox_inches='tight', facecolor='white')
 print(f"✅ OD Profile saved: {outpath}")

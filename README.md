@@ -4,7 +4,7 @@
 
 ReflexBench evaluates observer-participant reasoning: whether an AI system continues to reason correctly as its own output changes users, evidence, incentives, institutions, and other actors.
 
-This repository is an anonymized supplementary artifact for a double-blind 2026 submission. Do not add author identities, personal homepages, institutional clues, or cross-links that can de-anonymize the submission while review is active.
+This GitHub repository is a public development mirror. Its namespace, metadata, and commit history are identity-linkable, so it must not be represented or submitted as an anonymous double-blind artifact. When a venue requires anonymity, use only the separate venue-designated archive and follow that venue's current rules.
 
 ## Contents
 
@@ -27,8 +27,10 @@ This repository is an anonymized supplementary artifact for a double-blind 2026 
 | Ranking association | `judge_robustness/inter_judge_kappa.json` | Kendall tau values reported at or above 0.86 for the included judges; not universal judge independence |
 | MoE/dense comparison | `ablations/moe_vs_dense/moe_vs_dense_scores.csv` | Architecture comparison under the included conditions; not a general MoE premium |
 
-The anonymous archive route recorded for the review artifact is:
+The separate anonymous archive route recorded for venue review is:
 https://anonymous.4open.science/r/reflexbench-24E0
+
+The public GitHub mirror and the anonymous venue archive have different roles. Do not substitute one for the other.
 
 ## Claim Boundary
 

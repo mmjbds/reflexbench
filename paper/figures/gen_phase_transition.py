@@ -5,12 +5,13 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
+from pathlib import Path
 
 # Phase transition data from training logs
 # V12-V17.5: reflexivity = 0.000 for 150+ steps
 # V17.6 Step 25: first non-zero
 
-steps = list(range(0, 170))
+steps = list(range(0, 161))
 reflexivity = []
 
 for s in steps:
@@ -32,8 +33,6 @@ for s in steps:
         reflexivity.append(0.009)
     elif s == 160:
         reflexivity.append(0.011)
-    else:
-        reflexivity.append(0.008 + np.random.uniform(-0.002, 0.004))
 
 # Training round boundaries
 round_boundaries = {
@@ -58,7 +57,7 @@ ax1.annotate('Phase\nTransition\n(Step 153)',
 
 # Training round shading
 colors = ['#F1FAEE', '#A8DADC', '#F1FAEE', '#A8DADC', '#F1FAEE', '#A8DADC', '#F1FAEE']
-bounds = [0, 11, 29, 45, 81, 95, 128, 170]
+bounds = [0, 11, 29, 45, 81, 95, 128, 161]
 for i in range(len(bounds)-1):
     ax1.axvspan(bounds[i], bounds[i+1], alpha=0.3, color=colors[i], zorder=0)
 
@@ -68,7 +67,7 @@ for step, label in round_boundaries.items():
              rotation=45, ha='left', va='bottom')
 
 ax1.set_ylabel('Reflexivity Awareness Score', fontsize=11, fontweight='bold')
-ax1.set_xlim(0, 170)
+ax1.set_xlim(0, 160)
 ax1.set_ylim(-0.002, 0.035)
 ax1.set_title('Phase Transition in Reflexive Reasoning Emergence', fontsize=13, fontweight='bold', pad=10)
 ax1.spines['top'].set_visible(False)
@@ -98,7 +97,7 @@ ax2.fill_between(steps, beta_values, alpha=0.3, color='#2A9D8F', step='mid')
 ax2.step(steps, beta_values, color='#2A9D8F', linewidth=1.5, where='mid')
 ax2.set_ylabel('β (KL)', fontsize=10, fontweight='bold')
 ax2.set_xlabel('Cumulative Training Steps', fontsize=11, fontweight='bold')
-ax2.set_xlim(0, 170)
+ax2.set_xlim(0, 160)
 ax2.set_ylim(0.02, 0.06)
 ax2.set_yticks([0.03, 0.05])
 ax2.set_yticklabels(['Break', 'Stable'], fontsize=8)
@@ -109,12 +108,11 @@ ax2.spines['right'].set_visible(False)
 ax2.axvline(x=153, color='#457B9D', linestyle='--', linewidth=1.5, alpha=0.8)
 
 plt.tight_layout()
-outpath = '/Users/agent/Desktop/Soul_OS_Workspace/figures/phase_transition.png'
-import os
-os.makedirs('/Users/agent/Desktop/Soul_OS_Workspace/figures', exist_ok=True)
+outpath = Path(__file__).resolve().parent / 'phase_transition.png'
 plt.savefig(outpath, dpi=300, bbox_inches='tight', facecolor='white')
 print(f"✅ Figure saved to {outpath}")
 
 # Also save PDF for LaTeX
-plt.savefig(outpath.replace('.png', '.pdf'), bbox_inches='tight', facecolor='white')
-print(f"✅ PDF saved to {outpath.replace('.png', '.pdf')}")
+pdf_path = outpath.with_suffix('.pdf')
+plt.savefig(pdf_path, bbox_inches='tight', facecolor='white')
+print(f"✅ PDF saved to {pdf_path}")

@@ -10,4 +10,4 @@ The public supplementary artifact does not establish:
 - Judge-independent rankings outside the included judges and samples.
 - A universal MoE advantage from the released architecture comparison.
 
-This repository remains anonymized for double-blind review. Identity or homepage cross-links must not be introduced while that requirement is active.
+This public GitHub repository is identity-linkable through its namespace, metadata, and history. It is not an anonymous double-blind artifact. A separate venue-designated archive must be used wherever current venue rules require anonymity.
