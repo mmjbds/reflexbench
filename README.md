@@ -22,6 +22,14 @@ This GitHub repository is a public development mirror. Its namespace, metadata, 
 
 The workshop study reports nine models and 720 scored prompt responses. This public mirror currently exposes different evidence depths for those models: scenario-level raw response files for four models and aggregate observer-depth means for five additional models. It does not contain per-scenario raw responses and per-item scores for all nine models. The machine-readable [public artifact manifest](PUBLIC_ARTIFACT_MANIFEST.json) and CI audit keep that distinction explicit.
 
+Validate the released coverage contract locally with:
+
+```bash
+python scripts/audit_public_artifact.py
+```
+
+Frozen public version: [`v2.0.0-public.1`](https://github.com/mmjbds/reflexbench/releases/tag/v2.0.0-public.1). Verify selected files against [RELEASE_MANIFEST.json](RELEASE_MANIFEST.json); changes are recorded in [CHANGELOG.md](CHANGELOG.md).
+
 ## Interactive Entry
 
 The browser-based [ReflexBench Observer-Depth Check](https://mianzhang.org/demos/reflexbench-observer-depth/) loads all 20 released scenarios and four prompt levels. It creates a local orientation receipt from user-selected causal lenses. The receipt is not an automated ReflexBench score.
@@ -54,4 +62,4 @@ Public scenario extensions, artifact mismatches and narrow claim-boundary repair
 
 ## License
 
-Intentionally released repository code and artifact files are under Apache-2.0 unless a file states otherwise. See [LICENSE](LICENSE).
+Maintainer-authored code, schemas, prompts, and documentation are under Apache-2.0 unless a file states otherwise. Third-party model outputs are not relicensed by that grant. See [LICENSE_SCOPE.md](LICENSE_SCOPE.md), [responses/README.md](responses/README.md), and [LICENSE](LICENSE).

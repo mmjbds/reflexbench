@@ -1,0 +1,16 @@
+{
+  "schema": "public_release_manifest_v1",
+  "version": "2.0.0-public.1",
+  "tag": "v2.0.0-public.1",
+  "release_date": "2026-08-17",
+  "artifacts": {
+    "reflexbench.jsonl": "d4d73eba685fea9b62ff6e134c8369f179262e8b46e3c06ba9de7e2e9cd3a526",
+    "PUBLIC_ARTIFACT_MANIFEST.json": "4ad98f260b8ec604d9da029dfd97cdc03b7b21383086e1b9be917653b2812b36",
+    "scoring/aggregate_scores.csv": "c98359d8d52f19f44ed805a811bbbb563b51486843db9fbdbc124fe9da9e2871",
+    "audit/scenario_corpus_disjoint.json": "32b864819a412f134f0746e5f73fa7fd178f0ba4583f79e7b40e750123b818ca"
+  },
+  "verification": [
+    "python scripts/audit_public_artifact.py"
+  ],
+  "boundary": "Public benchmark artifact; not production validation, full output provenance, or a safety certification."
+}
