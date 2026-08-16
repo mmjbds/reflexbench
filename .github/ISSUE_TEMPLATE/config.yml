@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Interactive observer-depth check
+    url: https://mianzhang.org/demos/reflexbench-observer-depth/
+    about: Inspect the released scenarios before proposing an extension.

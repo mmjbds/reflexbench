@@ -12,11 +12,18 @@ This GitHub repository is a public development mirror. Its namespace, metadata, 
 |------|-------------|
 | `reflexbench.jsonl` | 80 evaluation prompts: 20 scenarios across four observer-depth levels |
 | `scenarios/` | Per-scenario JSON descriptions organized by domain |
-| `responses/` | Raw responses for nine evaluated public LLMs |
-| `scoring/` | Judge scripts and rubric definitions |
+| `responses/` | Scenario-level raw response files for four evaluated models (20 files per model; each file contains four prompt parts) |
+| `scoring/aggregate_scores.csv` | Four observer-depth means for five additional evaluated models; not per-scenario raw responses |
+| `scoring/` | Released score summaries and supporting files |
 | `ablations/moe_vs_dense/` | MoE-versus-dense comparison scores |
 | `audit/` | Scenario-to-provided-corpus text-disjointness audit |
 | `judge_robustness/` | Multi-judge agreement, rank association, and judge-bias checks |
+
+The workshop study reports nine models and 720 scored prompt responses. This public mirror currently exposes different evidence depths for those models: scenario-level raw response files for four models and aggregate observer-depth means for five additional models. It does not contain per-scenario raw responses and per-item scores for all nine models. The machine-readable [public artifact manifest](PUBLIC_ARTIFACT_MANIFEST.json) and CI audit keep that distinction explicit.
+
+## Interactive Entry
+
+The browser-based [ReflexBench Observer-Depth Check](https://mianzhang.org/demos/reflexbench-observer-depth/) loads all 20 released scenarios and four prompt levels. It creates a local orientation receipt from user-selected causal lenses. The receipt is not an automated ReflexBench score.
 
 ## Recompute Public Checks
 
@@ -35,6 +42,10 @@ The public GitHub mirror and the anonymous venue archive have different roles. D
 ## Claim Boundary
 
 The artifact supports recomputation and audit under the released scenarios, responses, judge configurations, and scoring files. It does not establish production trustworthiness, causal deployment effects, complete training-data provenance, universal judge independence, or general architectural superiority. See [CLAIM_BOUNDARY.md](CLAIM_BOUNDARY.md).
+
+## Contributing
+
+Public scenario extensions, artifact mismatches and narrow claim-boundary repairs are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and use the issue forms. Do not post private logs, credentials, customer data, restricted material or identity-sensitive review artifacts.
 
 ## License
 

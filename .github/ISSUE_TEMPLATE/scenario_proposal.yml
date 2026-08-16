@@ -1,0 +1,57 @@
+name: ReflexBench scenario proposal
+description: Propose a public scenario with four distinct observer-depth prompts and falsification conditions.
+title: "[Scenario] "
+labels: ["scenario"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private logs, customer data, credentials, restricted material, or identity-sensitive review artifacts.
+  - type: input
+    id: setting
+    attributes:
+      label: Decision setting
+      description: Name the actor, decision and environment in one concrete sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: mechanism
+    attributes:
+      label: Reflexive mechanism
+      description: Explain how the output changes outcomes, users, evidence, incentives, institutions or other agents.
+    validations:
+      required: true
+  - type: textarea
+    id: prompts
+    attributes:
+      label: OD-0, OD-1, OD-2 and OD-n prompts
+      description: Provide all four prompts and explain why each adds causal depth.
+    validations:
+      required: true
+  - type: textarea
+    id: rubrics
+    attributes:
+      label: Scoring rubrics
+      description: Give observable pass, partial and fail conditions for each prompt.
+    validations:
+      required: true
+  - type: textarea
+    id: falsifier
+    attributes:
+      label: Falsifier or redundancy check
+      description: What result would show this scenario is observer-invariant, underspecified or redundant?
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Provenance and license
+      description: List public sources and licenses, or state that the scenario is synthetic and original.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Public-safety confirmation
+      options:
+        - label: This proposal contains no private, restricted, credentialed or identity-sensitive material.
+          required: true

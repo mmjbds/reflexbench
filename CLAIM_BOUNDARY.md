@@ -2,6 +2,8 @@
 
 ReflexBench measures observer-participant reasoning under the released scenarios, observer-depth definitions, model responses, judge configurations, and scoring procedures.
 
+The workshop study reports nine evaluated models and 720 scored prompt responses. In this GitHub mirror, `responses/` contains scenario-level raw files for four models, while `scoring/aggregate_scores.csv` contains observer-depth means for five additional models. The mirror does not currently expose per-scenario raw responses and per-item scores for all nine models. Public readers should not infer full item-level recomputability from the reported study size.
+
 The public supplementary artifact does not establish:
 
 - Production trustworthiness or safety certification.

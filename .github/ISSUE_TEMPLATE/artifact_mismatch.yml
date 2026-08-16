@@ -1,0 +1,38 @@
+name: Public artifact mismatch
+description: Report a mismatch between documented scope, manifest counts and committed files.
+title: "[Artifact mismatch] "
+labels: ["artifact"]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: Exact public path
+      placeholder: responses/model/F01.json
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected state
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed state
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include commands that use only public files.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Public-safety confirmation
+      options:
+        - label: This report contains no private logs, credentials, customer data or restricted material.
+          required: true

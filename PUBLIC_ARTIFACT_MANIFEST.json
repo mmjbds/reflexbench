@@ -1,0 +1,41 @@
+{
+  "schema": "reflexbench_public_artifact_manifest_v1",
+  "as_of": "2026-08-16",
+  "reported_workshop_study": {
+    "scenario_count": 20,
+    "observer_depth_levels": 4,
+    "model_count": 9,
+    "scored_prompt_responses": 720,
+    "source": "paper/paper2_reflexbench.pdf"
+  },
+  "current_public_github_mirror": {
+    "scenario_records": 20,
+    "prompt_parts": 80,
+    "raw_response_model_directories": 4,
+    "raw_response_scenario_files": 80,
+    "raw_response_prompt_parts_represented": 320,
+    "aggregate_only_model_rows": 5,
+    "aggregate_observer_depth_cells": 20,
+    "raw_response_models": [
+      "doubao_seed_2.0_pro",
+      "gemini_2.5_pro",
+      "mimo_v2_pro",
+      "minimax_text_01"
+    ],
+    "aggregate_only_models": [
+      "Claude Opus 4.6",
+      "DeepSeek-R1",
+      "Kimi-K2 (Thinking)",
+      "GLM-5.1",
+      "Qwen3"
+    ]
+  },
+  "coverage_boundary": "The public mirror contains raw scenario-level response files for four models and aggregate observer-depth means for five additional models. It does not contain per-scenario raw responses and per-item scores for all nine models.",
+  "not_established": [
+    "production trustworthiness",
+    "real-world causal deployment effects",
+    "complete training-data lineage",
+    "universal judge independence",
+    "general architectural superiority"
+  ]
+}
