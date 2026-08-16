@@ -1,5 +1,6 @@
 # ReflexBench Supplementary v2
 
+[![public-ci](https://github.com/mmjbds/reflexbench/actions/workflows/public-ci.yml/badge.svg)](https://github.com/mmjbds/reflexbench/actions/workflows/public-ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 ReflexBench evaluates observer-participant reasoning: whether an AI system continues to reason correctly as its own output changes users, evidence, incentives, institutions, and other actors.
@@ -46,6 +47,10 @@ The artifact supports recomputation and audit under the released scenarios, resp
 ## Contributing
 
 Public scenario extensions, artifact mismatches and narrow claim-boundary repairs are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and use the issue forms. Do not post private logs, credentials, customer data, restricted material or identity-sensitive review artifacts.
+
+- Scenario proposal: https://github.com/mmjbds/reflexbench/issues/new?template=scenario_proposal.yml
+- Artifact mismatch: https://github.com/mmjbds/reflexbench/issues/new?template=artifact_mismatch.yml
+- Private security route: [SECURITY.md](SECURITY.md)
 
 ## License
 
